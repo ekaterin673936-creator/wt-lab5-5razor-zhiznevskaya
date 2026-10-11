@@ -16,4 +16,4 @@ https://github.com/ekaterin673936-creator/wt-lab5-5razor-zhiznevskaya
 
 ## Опубликованное приложение
 
-URL появится после деплоя на Render
+https://wt-lab5-5razor-zhiznevskaya.onrender.com
