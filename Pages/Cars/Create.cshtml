@@ -1,0 +1,57 @@
+@page
+@model wt_lab5_5razor_zhiznevskaya.Pages.Cars.CreateModel
+@{
+    ViewData["Title"] = "Добавить автомобиль";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <h2 class="mb-4 fw-bold">Добавить автомобиль</h2>
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="Car.Brand" class="form-label">Марка</label>
+                            <input asp-for="Car.Brand" class="form-control" placeholder="Например, Toyota" />
+                            <span asp-validation-for="Car.Brand" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Car.Model" class="form-label">Модель</label>
+                            <input asp-for="Car.Model" class="form-control" placeholder="Например, Camry" />
+                            <span asp-validation-for="Car.Model" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Car.Year" class="form-label">Год выпуска</label>
+                            <input asp-for="Car.Year" class="form-control" type="number" placeholder="2024" />
+                            <span asp-validation-for="Car.Year" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Car.PricePerDay" class="form-label">Цена/день (BYN)</label>
+                            <input asp-for="Car.PricePerDay" class="form-control" type="number" step="100" placeholder="5000" />
+                            <span asp-validation-for="Car.PricePerDay" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input asp-for="Car.IsAvailable" class="form-check-input" type="checkbox" />
+                            <label asp-for="Car.IsAvailable" class="form-check-label">Доступен для аренды</label>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                            <a asp-page="/Cars/Index" class="btn btn-secondary">Назад к списку</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
