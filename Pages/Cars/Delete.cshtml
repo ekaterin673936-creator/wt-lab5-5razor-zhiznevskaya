@@ -1,0 +1,36 @@
+@page
+@model wt_lab5_5razor_zhiznevskaya.Pages.Cars.DeleteModel
+@{
+    ViewData["Title"] = "Удалить автомобиль";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card border-danger shadow-lg rounded-4 animate__animated animate__shakeX">
+                <div class="card-body p-5 text-center">
+                    <div class="mb-4">
+                        <i class="bi bi-exclamation-triangle-fill text-danger display-1"></i>
+                    </div>
+                    <h2 class="fw-bold mb-3 text-danger">Удалить автомобиль?</h2>
+                    <p class="fs-5 mb-4">
+                        <strong>@Model.Car!.Brand @Model.Car.Model</strong>
+                        <span class="text-muted">(@Model.Car.Year г.)</span>
+                    </p>
+
+                    <form method="post">
+                        <input type="hidden" asp-for="Car!.Id" />
+                        <div class="d-flex gap-3 justify-content-center">
+                            <button type="submit" class="btn btn-danger btn-lg px-4">
+                                <i class="bi bi-trash"></i> Удалить
+                            </button>
+                            <a asp-page="/Cars/Index" class="btn btn-secondary btn-lg px-4">
+                                <i class="bi bi-x-circle"></i> Отмена
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

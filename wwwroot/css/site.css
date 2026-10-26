@@ -29,3 +29,80 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+/* === Крутые эффекты для карточек === */
+.hover-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.hover-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* === Градиент для Navbar === */
+.navbar-dark {
+    background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #db2777 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === Плавная анимация страниц === */
+body {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Красивые кнопки === */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* === Кастомный фон === */
+body {
+    background: #f8f9fc;
+}
+
+/* === Заголовок с иконкой === */
+h1.display-5 i {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* === Бейджи === */
+.badge.bg-gradient {
+    background-image: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+}
+
+/* === Плавное появление карточек === */
+.card {
+    animation: slideUp 0.5s ease-out backwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Hover-эффект на Navbar links === */
+.nav-link {
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    padding: 8px 12px !important;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+}
